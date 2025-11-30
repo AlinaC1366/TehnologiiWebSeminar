@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <script>
+        window.onload = () => {
+            const button = document.getElementById('myBtn')
+            const myEvt = new Event('myEvt')
+            const myEvtHandler = () => { console.log('The button was clicked.') }
+            const clickEventHandler = () => { document.dispatchEvent(myEvt) }
+            
+            button.addEventListener("click", clickEventHandler)
+            document.addEventListener("myEvt", myEvtHandler)
+
+            const catButton = document.createElement('button');
+            catButton.innerText = "Hraneste pisica!";
+           
+            document.body.appendChild(catButton);
+
+            const catEvent = new Event('miauEvent');
+
+            const miauHandler = () => {
+                console.log('CUSTOM EVENT: Pisica a primit mancare)');
+                alert(' Miau!');
+            }
+
+            catButton.addEventListener('click', () => {
+                console.log('DOM EVENT: Ai apasat pe butonul de hranire.');
+                
+                
+                document.dispatchEvent(catEvent);
+            });
+
+            document.addEventListener('miauEvent', miauHandler);
+        }
+    </script>
+</head>
+
+<body>
+    <button id="myBtn">Click me (Old)!</button>
+    </body>
+
+</html>

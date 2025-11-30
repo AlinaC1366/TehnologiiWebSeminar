@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container {
+    width: 300px;
+    text-align: center;
+}
+
+.row {
+    clear: both;
+    overflow: hidden; 
+}
+
+.square {
+    float: left;
+    
+    width: 100px;
+    height: 100px;
+    
+    background-color: #f9f9f9;
+    
+    border: 1px solid #999;
+    
+    box-sizing: border-box; 
+}
+
+
+.top {
+    border-top: none;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.right {
+    border-right: none;
+}

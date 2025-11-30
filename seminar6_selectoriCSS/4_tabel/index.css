@@ -1,0 +1,26 @@
+table {
+    border-collapse: collapse;
+    font-family: serif;
+    font-size: 18px;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: violet;
+}
+
+tbody tr:first-child {
+    background-color: blue;
+}
+
+tbody tr:last-child {
+    background-color: green;
+}
